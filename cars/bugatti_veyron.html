@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sample</title>
+    <link rel="stylesheet" href="cars.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="../index/index.html">home</a></li>
+                    <li><a href="../browse/browse.html">cars</a></li>
+                    <li><a href="../about/about.html">about</a></li>
+                    <li><a href="../login/login.html">logout</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="../pic/car_veyron.jpg" width="200px" height="200px" class="car">
+            <div id="circle">
+                <div class="feature one">
+                    <div>
+                        <h1>bugatti_veyron</h1>
+                    </div>
+                </div>
+                <div class="feature two">
+                      <div>
+                        <h1>TRNSMSN</h1>
+                        <p>Electronically controlled all-wheel drive system<br>(Haldex gen.IV)with rear mechanical self-locking differential</p>
+                           GBOX- ISR(Independent Shifting Rods)gearbox with 7 speeds.<br>
+                    </div>
+                </div>
+                <div class="feature three">
+                      <div>
+                        <h1>BODY AND CHASIS</h1>
+                        <p> Monocoque in carbon fiber                                                                                  
+                        </p>
+                    </div>
+                </div>
+                <div class="feature four">
+                      <div>
+                        <h1>WHEELS</h1>
+                        <p>RIMS FRONT- 20" specific forged rims: 9Jx20 ET32<br>
+                           RIMS REAR- 21" specific forged rims: 13Jx21 ET66.7<br>
+                           TIRES FRONT- 255/30 ZR20<br>
+                           TIRES REAR- 355/25 ZR21 <br>`    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="controls">
+            <h1 id="upbtn">↑</h1>
+            <h3>features</h3>
+            <h1 id="downbtn">↓</h1>
+        </div>
+    </div>
+    
+   <script>
+       var circle = document.getElementById("circle");
+       var upbtn = document.getElementById("upbtn");
+       var downbtn = document.getElementById("downbtn");
+       
+       var rotatevalue = circle.style.transform;
+       var rotatesum;
+       
+       upbtn.onclick = function(){
+           rotatesum = rotatevalue + "rotate(-90deg)";
+           circle.style.transform = rotatesum;
+           rotatevalue = rotatesum;
+       }
+       downbtn.onclick = function(){
+           rotatesum = rotatevalue + "rotate(90deg)";
+           circle.style.transform = rotatesum;
+           rotatevalue = rotatesum;
+       }
+   </script>
+</body>
+</html>
